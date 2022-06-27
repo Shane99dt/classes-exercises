@@ -4,15 +4,15 @@ class Car {
     this.speed = speed
   }
 
-  accelerate(speedNum) {
+  accelerate = (speedNum) => {
     this.speed += speedNum
   }
 
-  brake (breakNum){
+  brake = (breakNum) => {
     this.speed -= breakNum
   }
 
-  describe (){
+  describe = () => {
     console.log(`${this.brand} running at ${this.speed} km/h`)
   }
 }
@@ -50,7 +50,7 @@ class TV {
     this.volume = volume
   }
 
-  volumeDown(){
+  volumeDown = () => {
     if((this.volume - 10) < 0){
       console.log("Sound Min")
     }else{
@@ -59,7 +59,7 @@ class TV {
     }
   }
 
-  volumeUp(){
+  volumeUp = () => {
     if((this.volume + 10) > 100){
       console.log("Sound Max ")
     }else{
@@ -68,7 +68,7 @@ class TV {
     }
   }
 
-  // channelUp(channelNum){
+  // channelUp = (channelNum) => {
   //   if((this.channel + channelNum) > 50){
   //     console.log(`Channel ${this.channel}`)
   //   }else{
@@ -77,7 +77,7 @@ class TV {
   //   }
   // }
 
-  // channelDown(channelNum){
+  // channelDown =(channelNum) => {
   //   if((this.channel - channelNum) < 0){
   //     console.log(`Channel ${this.channel}`)
   //   }else{
@@ -86,7 +86,7 @@ class TV {
   //   }
   // }
 
-  changeChannel(channelNum){
+  changeChannel = (channelNum) => {
     if((this.channel + channelNum) < 0 || (this.channel + channelNum) > 50){
       console.log(`Channel ${this.channel}`)
     }else{
@@ -95,11 +95,11 @@ class TV {
     }
   }
 
-  describe(){
+  describe = () => {
     console.log(`TV : ${this.brand} | Channel : ${this.channel} | Volume : ${this.volume}`)
   }
 
-  resetTv(){
+  resetTv = () => {
     this.channel = 1
     this.volume = 50
     console.log(`TV has been reset - Channel : ${this.channel}, Volume : ${this.volume}`)
