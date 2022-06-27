@@ -95,6 +95,10 @@ class TV {
     }
   }
 
+  describe(){
+    console.log(`TV : ${this.brand} | Channel : ${this.channel} | Volume : ${this.volume}`)
+  }
+
   resetTv(){
     this.channel = 1
     this.volume = 50
@@ -122,4 +126,6 @@ samsungTv.volumeUp()
 samsungTv.changeChannel(-5)
 samsungTv.changeChannel(10)
 
+samsungTv.describe()
 samsungTv.resetTv()
+
