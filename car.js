@@ -68,8 +68,26 @@ class TV {
     }
   }
 
-  channelUp(channelNum){
-    if((this.channel + channelNum) > 50){
+  // channelUp(channelNum){
+  //   if((this.channel + channelNum) > 50){
+  //     console.log(`Channel ${this.channel}`)
+  //   }else{
+  //     this.channel += channelNum
+  //     console.log(`Channel ${this.channel}`)
+  //   }
+  // }
+
+  // channelDown(channelNum){
+  //   if((this.channel - channelNum) < 0){
+  //     console.log(`Channel ${this.channel}`)
+  //   }else{
+  //     this.channel -= channelNum
+  //     console.log(`Channel ${this.channel}`)
+  //   }
+  // }
+
+  changeChannel(channelNum){
+    if((this.channel + channelNum) < 0 || (this.channel + channelNum) > 50){
       console.log(`Channel ${this.channel}`)
     }else{
       this.channel += channelNum
@@ -77,23 +95,14 @@ class TV {
     }
   }
 
-  channelDown(channelNum){
-    if((this.channel - channelNum) < 0){
-      console.log(`Channel ${this.channel}`)
-    }else{
-      this.channel -= channelNum
-      console.log(`Channel ${this.channel}`)
-    }
-  }
-
   resetTv(){
     this.channel = 1
     this.volume = 50
-    console.log(`TV has been reset : Channel - ${this.channel}, Volume - ${this.volume}`)
+    console.log(`TV has been reset - Channel : ${this.channel}, Volume : ${this.volume}`)
   }
 }
 
-const samsungTv = new TV("Samsung", 40)
+const samsungTv = new TV("Samsung", 20)
 console.log(samsungTv)
 
 samsungTv.volumeDown()
@@ -104,10 +113,13 @@ samsungTv.volumeUp()
 samsungTv.volumeUp()
 samsungTv.volumeUp()
 
-samsungTv.channelUp(5)
-samsungTv.channelUp(10)
+// samsungTv.channelUp(5)
+// samsungTv.channelUp(10)
 
-samsungTv.channelDown(5)
-samsungTv.channelDown(10)
+// samsungTv.channelDown(5)
+// samsungTv.channelDown(10)
+
+samsungTv.changeChannel(-5)
+samsungTv.changeChannel(10)
 
 samsungTv.resetTv()
