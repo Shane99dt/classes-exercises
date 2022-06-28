@@ -44,10 +44,8 @@ class TV {
   // }
 
   changeChannel = (channelNum) => {
-    if((this.channel + channelNum) < 0 || (this.channel + channelNum) > 50){
-      console.log(`Channel ${this.channel}`)
-    }else{
-      this.channel += channelNum
+    if(channelNum >= 1 && channelNum <= 50){
+      this.channel = channelNum
       console.log(`Channel ${this.channel}`)
     }
   }
@@ -80,8 +78,12 @@ samsungTv.volumeUp()
 // samsungTv.channelDown(5)
 // samsungTv.channelDown(10)
 
-samsungTv.changeChannel(-5)
 samsungTv.changeChannel(10)
+samsungTv.changeChannel(51)
+samsungTv.changeChannel(1)
+samsungTv.changeChannel(1)
+
+
 
 samsungTv.describe()
 samsungTv.resetTv()
